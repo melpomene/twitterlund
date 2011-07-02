@@ -33,7 +33,7 @@ try {
 
 	//initialize a new curl resource
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.format.json?q=flattr');
+	curl_setopt($ch, CURLOPT_URL, 'http://stream.twitter.com/1/statuses/filter.json?track=twitter');
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
