@@ -15,14 +15,14 @@
 			<h1>Twittterlund</h1>
 		</div>
 		<ul id="meny">
-			<li><a href="index.php" id="current">Flöde</a></li>
-			<li><a href="om.php">Om</a></li>
+			<li><a href="index.php">Flöde</a></li>
+			<li><a href="om.php" id="current">Om</a></li>
 		</ul>
 	</div>
 	<div id="content">
-		<h1>Det här händer i Lund:</h1>
+		<h1>Om oss</h1>
 		<p>
-			En fet feed!
+			Vi är ett gäng coola killar som tyckte att den här sidan fattades i världen, så vi gjorde den.
 		</p>
 	</div>
 </body>
