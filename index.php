@@ -37,7 +37,7 @@ try {
 	curl_close($ch);
 	$content = json_decode($content, true);
 	foreach($content["results"] as $tweet) {
-		echo '<p class="tweet"><b>User:</b> '. $tweet["from_user"] . " <b>Tweet:</b>  "  . $tweet["text"] . '</p>';
+		echo '<p class="tweet"><b>User:</b> '. $tweet["from_user"] . " <b>Tweet:</b>  "  . $tweet["text"] . ' <a href="https://twitter.com/#!/'.$tweet["from_user"].'/status/'.$tweet["id_str"].'">Link</a></p>';
 	}
 	
 
