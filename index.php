@@ -22,13 +22,7 @@
 	<div id="content">
 		<h1>Det här händer i Lund:</h1>
 		<p>
-			En fet feed!
 <?php
-
-
-
-
-
 try {
 
 	//initialize a new curl resource
