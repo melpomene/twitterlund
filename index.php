@@ -40,10 +40,8 @@ try {
 	$content = curl_exec($ch);
 	curl_close($ch);
 	$content = json_decode($content, true);
-	var_dump($content);
-	
 	foreach($content["results"] as $tweet) {
-		echo '<p><b>User:</b> '. $tweet["from_user"] . " <b>Tweet:</b>  "  . $tweet["text"] . '</p>';
+		echo '<p class="tweet"><b>User:</b> '. $tweet["from_user"] . " <b>Tweet:</b>  "  . $tweet["text"] . '</p>';
 	}
 	
 
