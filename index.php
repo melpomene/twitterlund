@@ -33,7 +33,7 @@ try {
 
 	//initialize a new curl resource
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q=flattr&rpp=100');
+	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q=lund&rpp=100');
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -42,8 +42,8 @@ try {
 	$content = json_decode($content, true);
 	var_dump($content);
 	
-	foreach($content-["results"] as $tweet) {
-		echo '<p>' . $tweet["text"] . '</p>';
+	foreach($content["results"] as $tweet) {
+		echo '<p><b>User:</b> '. $tweet["from_user"] . " <b>Tweet:</b>  "  . $tweet["text"] . '</p>';
 	}
 	
 
