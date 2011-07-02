@@ -24,7 +24,6 @@
 		<p>
 			En fet feed!
 			<?php
-require_once 'Services/Twitter.php';
 
 
 
