@@ -23,6 +23,43 @@
 		<h1>Det här händer i Lund:</h1>
 		<p>
 			En fet feed!
+			<?php
+require_once 'Services/Twitter.php';
+
+
+
+
+
+try {
+
+	//initialize a new curl resource
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.format.json?q=flattr');
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	$content = curl_exec($ch);
+	curl_close($ch);
+	//include the JSON class
+	include('json.class.php');
+	$json = new services_JSON();
+	//Assume the json is held in $content
+	$decoded = $json->decode($content);
+	
+
+	if($content === FALSE) {
+		//Content couldn't be retrieved... Do something
+	} else {
+		//Content was retrieved do something with it.
+	}
+
+
+} catch (Services_Twitter_Exception $e) {
+
+    echo $e->getMessage();
+
+}
+			?>
 		</p>
 	</div>
 </body>
