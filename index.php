@@ -39,7 +39,7 @@ try {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	$content = curl_exec($ch);
 	curl_close($ch);
-	$content = json_decode($content);
+	$content = json_decode($content, true);
 	var_dump($content);
 	
 	foreach($content->result as $tweet) {
