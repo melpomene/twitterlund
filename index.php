@@ -44,7 +44,7 @@ try {
 	include('json.class.php');
 	$json = new services_JSON();
 	//Assume the json is held in $content
-	$decoded = $json->decode($content);
+	echo $decoded = $json->decode($content);
 	
 
 	if($content === FALSE) {
