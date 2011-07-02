@@ -21,7 +21,6 @@
 	</div>
 	<div id="content">
 		<h1>Det här händer i Lund:</h1>
-		<p>
 <?php
 try {
 
@@ -37,7 +36,11 @@ try {
 	curl_close($ch);
 	$content = json_decode($content, true);
 	foreach($content["results"] as $tweet) {
-		echo '<p class="tweet"><b>User:</b> '. $tweet["from_user"] . " <b>Tweet:</b>  "  . $tweet["text"] . ' <a href="https://twitter.com/#!/'.$tweet["from_user"].'/status/'.$tweet["id_str"].'">Link</a></p>';
+		echo '<p class="tweet">'."\n";
+		echo "\t<b>User:</b> ".$tweet["from_user"]."\n";
+		echo "\t<b>Tweet:</b>  ".$tweet["text"]."\n";
+		echo "\t<a href=\"https://twitter.com/#!/".$tweet["from_user"].'/status/'.$tweet["id_str"].'">Link</a>'."\n";
+		echo '</p>'."\n";
 	}
 	
 
@@ -54,7 +57,6 @@ try {
 
 }
 			?>
-		</p>
 	</div>
 </body>
 </html>
