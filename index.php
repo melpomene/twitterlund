@@ -42,8 +42,8 @@ try {
 	$content = json_decode($content, true);
 	var_dump($content);
 	
-	foreach($content->result as $tweet) {
-		echo '<p>' . $tweet->text . '</p>';
+	foreach($content-["results"] as $tweet) {
+		echo '<p>' . $tweet["text"] . '</p>';
 	}
 	
 
