@@ -25,7 +25,7 @@
 			Vi är ett gäng coola killar som tyckte att den här sidan fattades i världen, så vi gjorde den.
 		</p>
 		<p>
-			På denna sida kan du följa taggarna #lund, #lth, #blekingska och #StudentiLund. Tycker du att någon tagg fattas? Skicka i sådana fall ett mail till @kd35a eller @Kejsarmakten.
+			På denna sida kan du följa twitterkonton som är kopplade till Lunds studentliv för att se vad som händer. Tycker du att någon tagg/något konto fattas? Kontakta oss då på twitter @kd35a eller @Kejsarmakten.
 		</p>
 	</div>
 </body>
