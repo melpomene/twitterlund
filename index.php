@@ -42,7 +42,7 @@ try {
 	$content = json_decode($content);
 	
 	foreach($content as $tweet) {
-		echo '<p>'.$tweet->text.'</p>';
+		echo '<p>'.$tweet["text"].'</p>';
 	}
 	
 
