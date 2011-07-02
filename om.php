@@ -25,7 +25,7 @@
 			Vi är ett gäng coola killar som tyckte att den här sidan fattades i världen, så vi gjorde den.
 		</p>
 		<p>
-			På denna sida kan du följa taggarna #lund, #lth, #blekingska och #StudentiLund. Tycker du att någon tagg fattas? Skicka i sådana fall ett mail till fredrik (punkt) strandin (at) gmail (punkt) com.
+			På denna sida kan du följa taggarna #lund, #lth, #blekingska och #StudentiLund. Tycker du att någon tagg fattas? Skicka i sådana fall ett mail till @kd35a eller @Kejsarmakten.
 		</p>
 	</div>
 </body>
