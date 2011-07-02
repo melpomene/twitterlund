@@ -33,7 +33,7 @@ try {
 
 	//initialize a new curl resource
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q=%23lund&rpp=100');
+	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q=%23lund+OR+%23svpol&rpp=100');
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
