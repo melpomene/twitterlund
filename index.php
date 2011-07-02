@@ -33,13 +33,17 @@ try {
 
 	//initialize a new curl resource
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.xml?q=flattr&rpp=100');
+	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q=flattr&rpp=100');
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	$content = curl_exec($ch);
 	curl_close($ch);
-	print_r($content);
+	$content = json_decode($content);
+	
+	foreach($content as $tweet) {
+		echo '<p>'.$tweet->text.'</p>';
+	}
 	
 
 	if($content === FALSE) {
