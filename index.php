@@ -23,7 +23,7 @@
 		<h1>Det här händer i Lund:</h1>
 		<p>
 			En fet feed!
-			<?php
+<?php
 
 
 
@@ -39,22 +39,7 @@ try {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	$content = curl_exec($ch);
 	curl_close($ch);
-	//include the JSON class
-	include('json.class.php');
-	$json = new services_JSON();
-	//Assume the json is held in $content
-	$decoded = $json->decode($content);
-	
-	print '<pre>';
 	print_r($content);
-	print '</pre>';
-	
-	$content = json_decode($content);
-
-	foreach($content as $tweet) {
-		echo '<p>'.$tweet->text.'</p>';
-	}
-	
 	
 
 	if($content === FALSE) {
