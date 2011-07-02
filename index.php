@@ -33,7 +33,9 @@ try {
 
 	//initialize a new curl resource
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q=%23lund+OR+%23lth+OR+%40blekingska+OR+%40StudentiLund&rpp=100');
+	$search_query = "%23lund+OR+%40blekingska+OR+%40StudentiLund+OR+%40lundagard+OR+%40Krischansta+OR+%40LundsNation+OR+%40studentsangarna+OR+%40hallandsnation
+	+OR+%40VStyret+OR+%40Teknologkaren+OR+%40radioaf+OR+%40Studentafton+OR+%40medfak_LU+OR+%40helsingkrona+OR+%40Studentteater+OR+%40Omkretsen+OR+%40Lundaspexarna";
+	curl_setopt($ch, CURLOPT_URL, 'http://search.twitter.com/search.json?q='. $search_query . '&rpp=100');
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
