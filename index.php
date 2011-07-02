@@ -41,7 +41,7 @@ try {
 	curl_close($ch);
 	$content = json_decode($content);
 	var_dump($content);
-	foreach($content as $tweet) {
+	foreach($content["results"] as $tweet) {
 		echo '<p>'.$tweet["text"].'</p>';
 	}
 	
