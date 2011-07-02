@@ -44,7 +44,18 @@ try {
 	include('json.class.php');
 	$json = new services_JSON();
 	//Assume the json is held in $content
-	echo $decoded = $json->decode($content);
+	$decoded = $json->decode($content);
+	
+	print '<pre>';
+	print_r($content);
+	print '</pre>';
+	
+	$content = json_decode($content);
+
+	foreach($content as $tweet) {
+		echo '<p>'.$tweet->text.'</p>';
+	}
+	
 	
 
 	if($content === FALSE) {
