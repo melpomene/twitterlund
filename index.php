@@ -35,7 +35,13 @@ try {
 	$content = curl_exec($ch);
 	curl_close($ch);
 	$content = json_decode($content, true);
+echo "<!--\n";
+var_dump($content);
+echo "-->\n";
 	foreach($content["results"] as $tweet) {
+		if ($tweet["from_user"] == "Map_Game") {
+			continue;
+		}
 		echo '<p class="tweet">'."\n";
 		echo "\t<b>User:</b> ".$tweet["from_user"]."\n";
 		echo "\t<b>Tweet:</b>  ".$tweet["text"]."\n";
